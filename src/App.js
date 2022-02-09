@@ -14,6 +14,7 @@ function App() {
   useEffect(()=>{
     axios.get(`https://pixabay.com/api/?key=${APIKEY}&q=${term}&image_type=photo&pretty=true`).then((Response)=>{
       setImages(Response.data.hits);
+      // console.log(Response.data);
       setIsLoading(false);
     })
   })
